@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block info %}
+
+<script>
+    var recent_searches = "{{ request.user.get_recent_searches }}"
+</script>
+
+<div class="row align-items-center flex-grow-1 pb-5">
+    <div class="col-3"></div>
+    <!-- Main box -->
+    <div id="box" class="col-6 box p-4 flex-grow-1">
+        <!-- Search -->
+        <div class="row pb-3">
+            <!-- Search box -->
+            <div class="col-12">
+                <div id="search_box" class="search_box py-3 px-4">
+                    <form class="form" method="GET" action="{% url 'result' %}">
+                        <div class="row">
+                            <div class="col-9">
+                                <input id="search_query" type="text" name="search" placeholder="Search by title, actor or genre" autocomplete="off">
+                            </div>
+                            <div class="col-3" style="display: block; text-align: right;">
+                                <button id="enter" type="submit">Enter</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <script>
+                        var movies = []
+                    </script>
+                    {% for movie in movies %}
+                    <script>
+                        movies.push([
+                            "{{ movie.0.movie_id }}",
+                            "{{ movie.0.title }}",
+                            "{{ movie.1 }}"
+                        ])
+                    </script>
+                    {% endfor %}
+
+                    <!-- Line -->
+                    <div class="row">
+                        <div id="line" class="col-12">
+                            <hr id="line_element" class="px-0" style="display: none; height: 0.5px;">
+                        </div>
+                    </div>
+
+                    <!-- Subtitle -->
+                    <div id="subtitle_row" class="row">
+                        <div id="subtitle" class="col-6 ">
+                        </div>
+                        <!-- Clear recent search button -->
+                        <div class="col-6 d-flex justify-content-end">
+                            <form action="{% url 'index' %}" method='POST'> 
+                                {% csrf_token %}
+                                <button id="clear_button" type="submit">
+                                    Clear all
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Recommendations Title -->
+        <div class="row ">
+            <div class="col-10">
+                <div class="subtitle pb-1">Top movies</div>
+            </div>
+            <div class="col-2">
+                <a class="link" href="{% url 'topmovies' %}">See all</a>
+            </div>
+        </div>
+        <!-- Recommended Movies -->
+        <div class="row justify-content-center">
+            {% for movie in top_movies %}
+            <div class="col-2 lead px-2 pt-1">
+                <a class="top_movie" id="{{ movie.movid_id }}"href="{% url 'movie' movie.movie_id %}" style="width:100%;">
+                <!-- Movie poster -->
+                    <img src="{{movie.image}}" style="width:inherit; height:auto; border-radius: 10px;">
+                </a>
+            </div>
+            {%endfor%}
+        </div>
+        
+
+    </div>
+    <div class="col-3">
+        
+    </div>
+</div>
+
+
+
+{% endblock %}

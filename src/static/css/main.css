@@ -1,0 +1,492 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    -webkit-transition: height .25s ease;
+       -moz-transition: height .25s ease;
+            transition: height .25s ease;
+}
+
+/* width */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    margin-right: 4px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgb(100,100,100, 0.4);
+    /* box-shadow: 1px 1px 10px rgb(255, 255, 255, 0.4); */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* ----------------- Search ----------------- */
+.box {
+    background-color: white;
+    border-radius: 15px;
+    width: 75vh;
+}
+
+.search_box {
+    background-color: #EFEFEF;
+    border-radius: 15px;
+}
+
+.icon {
+    height: 20px;
+    text-align: center;
+}
+
+#search_query {
+    background-color: transparent;
+    border: none;
+    background-image: url('/static/images/search_icon.svg');
+    background-position: 0px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    width: 100%;
+}
+
+input[type=text]:focus {
+    outline: none !important;
+}
+
+#enter {
+    font-size: 12px;
+    background-image: url('/static/images/Enter.svg');
+    background-position: 40px 4px;
+    background-size: 12px;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    border: none;
+    color: grey;
+}
+
+.avatar {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    border-style: double;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #252525;
+    padding-left: 0 !important;
+}
+
+#subtitle {
+    color:#747474 !important;
+}
+
+#clear_button {
+    color: red;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    display: none;
+}
+
+.link {
+    color: red;
+    font-weight: bold;
+    text-align: right;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+.link:hover {
+    color: darkred;
+}
+
+.dropdown-toggle[aria-expanded="true"]:after {
+    transform: rotate(180deg);
+}
+  
+.dropdown-toggle:after {
+    transition: 0.5s;
+}
+
+.entry {
+    text-decoration: none;
+    cursor: pointer;
+    color: red;
+}
+
+.entry:hover {
+    color: darkred;
+}
+
+.select:hover {
+    background-color: #DEDEDE;
+    border-radius: 5px;
+}
+
+.select:hover .genre {
+    background-color: red;
+}
+
+.genre {
+    background-color: #747474;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    display:inline;
+}
+
+.movie {
+    color: #252525;
+}
+
+.top_result {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.top_movie {
+    text-decoration: none;
+    color: #252525;
+    border: none !important;
+    border-radius: 10px !important;
+    width: 100%;
+}
+
+
+/*----------------- Login -----------------*/
+.login_field {
+    width: 75vh;
+}
+
+.login_field:focus {
+    border-color: rgba(255, 0, 0, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.pass {
+    border-radius: 0px 0px 15px 15px;
+}
+
+.pass2 {
+    border-radius: 0px 0px 0px 0px;
+    border-top: 0.5px solid #ced4da;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.login {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.login-button {
+    color: white;
+    background-color: red;
+    width: 75vh;
+    border-radius: 10px;
+}
+
+.img-responsive {
+    display: block;
+    width: 65vh;
+    height: auto;
+}
+
+.link-primary {
+    color: red;
+}
+
+.form-style {
+    width: 75vh;
+}
+
+/* ----------------- Register ----------------- */
+.register_field {
+    width: 75vh;
+}
+
+.register_field:focus {
+    border-color: rgba(255, 0, 0, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.register {
+    border-radius: 15px 15px 0px 0px;
+    border: none;
+}
+
+
+/* ----------------- Results ----------------- */
+
+#results_search {
+    background-image: url('/static/images/search_icon.svg');
+    background-position: 10px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left:45px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #EFEFEF;
+}
+
+#results_enter {
+    font-size: 12px;
+    background-image: url('/static/images/Enter.svg');
+    background-position: 55px 50%;
+    background-size: 15px;
+    padding: 0px 40px 0px 20px;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #EFEFEF;
+    color: grey;
+}
+
+#results_search:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.title {
+    font-size: 20px;
+    font-weight:500;
+}
+
+#title1 {
+    color: white;
+}
+
+#title2 {
+    color: red;
+}
+
+#title3 {
+    color: #747474;
+}
+
+.sub{
+    color: #747474;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.explore {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+}
+
+.selected_explore {
+    color: #747474 !important;
+}
+
+.selected_explore:hover {
+    color: #747474 !important;
+}
+
+.explore:hover {
+    color: red;
+    
+}
+
+/* ----------------- Movie ----------------- */
+.img_gradient {
+    background-size: cover;
+    background-image:
+    linear-gradient(180deg, rgba(33, 37, 41, 0) 0%, rgba(33, 37, 41, 0) 47.92%, #212529 100%),
+    url('/static/images/test_movie_background.jpg');
+    background-position: top center;
+}
+
+.movie_title {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.movie_subtitle {
+    color: white;
+    font-size: 14px;
+}
+
+.movie_text {
+    color: white;
+    font-size: 15px;
+}
+
+/* ----------------- Top Movies ----------------- */
+.top_movie_card {
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    /* border-radius: 0px 0px 10px 10px; */
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.movie_result {
+    transition: all .2s ease-in-out;
+}
+
+.movie_result:hover {
+    transform: scale(1.1);
+}
+
+.movie_result:hover .top_movie_card{
+    visibility: visible;
+}
+
+/* ----------------- Account ----------------- */
+.account_div {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;    
+}
+
+.account_button {
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.account_button:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.edit_button {
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 100%;
+    font-size: 13px;
+}
+
+.account_field:disabled {
+    background-color: transparent !important;
+    border: none;
+    color: white;
+}
+
+.account_field {
+    font-weight: normal;
+}
+
+.account_subtitle {
+    color: #A7A7A7;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.name {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.account_avatar {
+    display: flex;
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    border-style: double !important;
+    border-color: white;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgb(0,0,0,0.5);
+  }
+  
+  /* When you mouse over the container, fade in the overlay icon*/
+  .account_avatar:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* The icon inside the overlay is positioned in the middle vertically and horizontally */
+  .icon {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .fa-pencil:hover {
+    color: #eee !important;
+  }
+
+.pencil {
+    position: relative;
+    top: 0;
+    right: 20px;
+}
+
+.avatar_container {
+    cursor: pointer;
+    position: relative;
+}
+
+.fav_genre {
+    color:white;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.save {
+    color: white;
+    background-color: red;
+}
+
+.save:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.choose_genre {
+    color:white;
+    background-color: #747474;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: red !important;
+}
+
+.password-info {
+    font-size: 13px;
+    color: #252525;
+}
